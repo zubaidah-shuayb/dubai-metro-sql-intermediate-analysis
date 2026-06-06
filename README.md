@@ -76,9 +76,11 @@ RESULT:
 
 
 
+
 CHALLENGE 2:
 Management wants to look at the size of the different metro networks in your data.  
 Write a query that shows each metro line and the total number of stations belonging to that line.Only display lines that have more than 15 stations total.  
+
 
 SQL:
 SELECT line, COUNT(*)
@@ -86,18 +88,23 @@ FROM metro_stations
  GROUP BY line 
 HAVING COUNT(*) >15
 
+
 RESULT:
 "Red"	"37"
 "Green"	"18"
 
 
+
+
 CHALLENGE 3:
 Write a query from scratch that selects the station_name from the metro_stations table, forces all the station names into all uppercase letters while renaming that specific column header AS clean_name, and filters the rows using a WHERE clause combined with LIKE so that the output only displays stations where the name starts with the letter 'A'.
+
 
 SQL:
 SELECT UPPER(station_name) AS clean_name
 FROM metro_stations
 WHERE station_name LIKE 'A%'
+
 
 RESULT:
 "AL FURJAN"
