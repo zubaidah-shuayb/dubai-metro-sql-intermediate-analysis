@@ -3,10 +3,10 @@ This document contains a series of business-driven questions answered using inte
 
 
 CHALLENGE 1:
-* Write a query from scratch that selects the station_name and to_burj_khalifa_km. Add a new conditional column called proximity_status that follows these rules:  
+Write a query from scratch that selects the station_name and to_burj_khalifa_km. Add a new conditional column called proximity_status that follows these rules:  
 If it is less than 10 km from Burj Khalifa, label it 'Very Close'.
 If it is between 10 km and 25 km (inclusive), label it 'Commuter Distance'.
-Anything greater than 25 km should be labeled 'Far Out'.*/
+Anything greater than 25 km should be labeled 'Far Out'.
 
 SQL:
 SELECT  station_name, to_burj_khalifa_km,
@@ -77,8 +77,8 @@ RESULT:
 
 
 CHALLENGE 2:
-/*Management wants to look at the size of the different metro networks in your data.  
-Write a query that shows each metro line and the total number of stations belonging to that line.Only display lines that have more than 15 stations total.  */
+Management wants to look at the size of the different metro networks in your data.  
+Write a query that shows each metro line and the total number of stations belonging to that line.Only display lines that have more than 15 stations total.  
 
 SQL:
 SELECT line, COUNT(*)
@@ -92,7 +92,7 @@ RESULT:
 
 
 CHALLENGE 3:
-/*Write a query from scratch that selects the station_name from the metro_stations table, forces all the station names into all uppercase letters while renaming that specific column header AS clean_name, and filters the rows using a WHERE clause combined with LIKE so that the output only displays stations where the name starts with the letter 'A'.*/
+Write a query from scratch that selects the station_name from the metro_stations table, forces all the station names into all uppercase letters while renaming that specific column header AS clean_name, and filters the rows using a WHERE clause combined with LIKE so that the output only displays stations where the name starts with the letter 'A'.
 
 SQL:
 SELECT UPPER(station_name) AS clean_name
